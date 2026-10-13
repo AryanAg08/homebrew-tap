@@ -7,9 +7,9 @@ class Crew < Formula
   head "https://github.com/AryanAg08/crew.git", branch: "main"
 
   depends_on "go" => :build
+  depends_on :macos
   # Every session is a tmux session, and the sidebar is a tmux pane.
   depends_on "tmux"
-  depends_on :macos
 
   def install
     ldflags = "-s -w -X main.version=#{version}"
